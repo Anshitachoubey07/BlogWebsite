@@ -1,0 +1,23 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+
+<p><%= firstPara %></p>
+
+<!-- <% for (let i = 0; i < changes.length; i++) { %>
+    <% console.log(changes[i].title); %>
+    
+<% }; %> -->
+
+<!-- <% changes.forEach(function(change){ %>
+   <% console.log(change.title); %>
+<% }) %> -->
+
+<% changes.forEach(function(change){ %>
+    <h1><%= change.title %></h1>
+    <P><%=  change.content.substring(0, 100) %>...
+        <a href="/posts/<%= change.title %>">Read More</a>
+    </P> 
+ <% }) %>
+
+<%- include("partials/footer") -%>
